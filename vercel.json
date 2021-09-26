@@ -8,7 +8,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "https://v6.douyinvod.com/e18f927eddae62d80039a0c565528865/61504ae0/video/tos/cn/tos-cn-ve-15/d077aad8fea74493b35fa5868cde99b3/?a=1128&br=1052&bt=1052&btag=4&cd=0%7C0%7C0&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=OR_LrKZZI02K1iTz7Th94ictRsWd.Jz1R68&l=20210926172628010212042167360306EF&lr=&mime_type=video_mp4&net=0&pl=0&qs=0&rc=M2Vkdzs6Zmw0NjMzNGkzM0ApMzQ5ZjM4ZmVmN2UzNWc6N2cpaGRqbGRoaGRmLTJvcXI0b15xYC0tZC0wc3NjNWAwM2BeMGNhNC0uNGAvOmNwb2wrbStqdDo%3D&vl=&vr="
+      "dest": "/index.js"
     }
   ]
 }
