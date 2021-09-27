@@ -21,7 +21,7 @@ var server = http.createServer(function(req, res) {
   console.log('requestUrl: ', url);
   if (url.indexOf('/?url=') >= 0) {
     const finalUrl = url.replace('/?url=', '');
-    proxy.web(req, res, { target: finalUrl });
+    proxy.web(req, res, { target: 'https://api.xingzou.art/poetryapi/historytoday/query' });
   } else {
     res.writeHead(404, {
       'Connection': 'close'
