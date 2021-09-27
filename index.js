@@ -19,7 +19,7 @@ var server = http.createServer(function(req, res) {
   const url = req.url;
   if (url.indexOf('/?url=') >= 0) {
     const finalUrl = decodeURI(url.replace('/?url=', ''));
-    console.log('requestUrl: ', finalUrl);
+    console.log('request url: ', finalUrl);
     req.url = '';
     // req.headers['x-real-ip'] = '220.181.38.251'
     proxy.web(req, res, { target: finalUrl });
