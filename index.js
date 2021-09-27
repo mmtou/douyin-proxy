@@ -18,7 +18,9 @@ var server = http.createServer(function(req, res) {
   delete req.headers.referer
   const url = req.url;
   if (url.indexOf('/?url=') >= 0) {
-    const finalUrl = decodeURI(url.replace('/?url=', ''));
+    const sourceUrl = url.replace('/?url=', '');
+    const finalUrl = decodeURI(sourceUrl);
+    console.log('source url: ', sourceUrl);
     console.log('request url: ', finalUrl);
     req.url = '';
     // req.headers['x-real-ip'] = '220.181.38.251'
