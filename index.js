@@ -25,7 +25,7 @@ var server = http.createServer(function(req, res) {
     // console.log('proxy url: ', finalUrl);
     req.url = '';
     req.headers['x-real-ip'] = '220.181.38.251'
-    proxy.web(req, res, { target: finalUrl });
+    proxy.web(req, res, { target: finalUrl, timeout: 120000 });
   } else {
     res.writeHead(404, 'no proxy url', {
       'Connection': 'close'
