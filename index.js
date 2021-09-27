@@ -16,11 +16,11 @@ var server = http.createServer(function(req, res) {
   // and then proxy the request.
   delete req.headers.host
   delete req.headers.referer
-  req.headers['X-Real-IP'] = '220.181.38.251'
+  req.headers['x-real-ip'] = '220.181.38.251'
   const url = req.url;
-  console.log('requestUrl: ', url);
-  if (url.indexOf('/?url=') >= 0) {
+  if (url.indexOf('/?url=http') >= 0) {
     const finalUrl = url.replace('/?url=', '');
+    req.url = '';
     proxy.web(req, res, { target: 'https://api.xingzou.art/poetryapi/historytoday/query' });
   } else {
     res.writeHead(404, {
