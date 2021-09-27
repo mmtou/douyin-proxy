@@ -16,11 +16,12 @@ var server = http.createServer(function(req, res) {
   // and then proxy the request.
   delete req.headers.host
   delete req.headers.referer
-  req.headers['x-real-ip'] = '220.181.38.251'
   const url = req.url;
-  if (url.indexOf('/?url=http') >= 0) {
+  console.log('requestUrl: ', url);
+  if (url.indexOf('/?url=') >= 0) {
     const finalUrl = url.replace('/?url=', '');
     req.url = '';
+    // req.headers['x-real-ip'] = '220.181.38.251'
     proxy.web(req, res, { target: decodeURI(finalUrl) });
   } else {
     res.writeHead(404, {
